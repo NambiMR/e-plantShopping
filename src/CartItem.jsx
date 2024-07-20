@@ -29,6 +29,11 @@ const CartItem = ({ onContinueShopping }) => {
     dispatch(removeItem(item.name));
   };
 
+  const handleCheckout = () => {
+    // Implement checkout logic here
+    alert('Proceeding to checkout');
+  };
+
   return (
     <div className="cart-container">
       <h2 style={{ color: 'black' }}>Total Cart Amount: ${calculateTotalAmount(cart)}</h2>
@@ -50,6 +55,7 @@ const CartItem = ({ onContinueShopping }) => {
         ))}
       </div>
       <button className="cart-continue" onClick={onContinueShopping}>Continue Shopping</button>
+      <button className="cart-checkout" onClick={handleCheckout}>Checkout</button>
     </div>
   );
 };
